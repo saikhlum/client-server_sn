@@ -1,0 +1,9 @@
+# ignore ALL .log files
+*.log
+
+# ignore ALL files in ANY directory named temp
+temp/
+
+/client/node_modules
+/server/node_modules
+
