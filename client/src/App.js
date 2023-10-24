@@ -7,13 +7,17 @@ function App() {
   useEffect(() => {
     fetch("/get")
       .then((res) => res.json())
-      .then((data) => setData(data.message));
+      .then((data) => setData(data));
   }, []);
 
   return (
     <div className="App">
       <header className="App-header">
-        <p>{!data ? "Loading..." : data}</p>
+        <p>{!data ? "Loading..." : data.name}</p>
+        <p>{data.age}</p>
+        <p>{data.gender}</p>
+        <p>{data.phone}</p>
+        <p>{data.address}</p>
       </header>
     </div>
   );
